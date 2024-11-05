@@ -9,7 +9,7 @@ export default function DashboardHome() {
 			<div className="grid grid-cols-12 gap-4 mt-4">
 				<div className="col-span-5 gap-4 flex flex-col">
 					{/* Welcome */}
-					<h1 className="text-xl font-bold"> Welcome Alex</h1>
+					<h1 className="text-xl font-bold"> Welcome, Alex</h1>
 					{/* card to dispaly weeklyu growth */}
 					<StreakCard />
 					{/* card for achievements */}

@@ -18,7 +18,7 @@ export default function Header() {
 				{/* logo */}
 				<Link to="/" className="text-2xl font-bold">
 					{/* Brilliant */}
-					<img src={`/public/logo.png`} />
+					<img src={`/logo.png`} />
 				</Link>
 				{/* <img src={logo} alt="logo" className="w-40 h-10" /> */}
 				{/* navigation */}

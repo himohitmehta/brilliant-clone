@@ -3,6 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CoursesList from "./courses-list";
 import useSearchQuery from "@/lib/hooks/use-search-query";
 import { useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Card } from "@/components/ui/card";
 
 export default function CoursesTabs() {
 	// const [tab, setTab] = useQueryState("tab");
@@ -31,7 +33,17 @@ export default function CoursesTabs() {
 							</TabsTrigger>
 						))}
 					</TabsList>
-					<div>Loading...</div>
+					<div className="grid grid-cols-6 gap-4 my-8">
+						{[1, 2, 3, 4, 5, 6].map((item) => (
+							<Card
+								className="p-4 flex flex-col gap-4"
+								key={item}
+							>
+								<Skeleton className="h-40 w-full" />
+								<Skeleton className="h-10 w-full" />
+							</Card>
+						))}
+					</div>
 				</Tabs>
 			</div>
 		);
@@ -55,7 +67,7 @@ export default function CoursesTabs() {
 						tab === "new-courses" || tab === null || tab === "";
 					return (
 						<TabsContent value={item.key} key={item.key}>
-							<CoursesList isNew={isNew} />
+							<CoursesList title={item.title} isNew={isNew} />
 						</TabsContent>
 					);
 				})}

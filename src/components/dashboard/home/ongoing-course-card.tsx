@@ -3,9 +3,11 @@ import { Card } from "@/components/ui/card";
 
 export default function OngoingCourseCard() {
 	return (
-		<Card>
+		<Card className="rounded-2xl overflow-hidden">
 			{/* img */}
-			<div></div>
+			<div>
+				<img src="/current-course.png" />
+			</div>
 			<div className="flex w-full flex-col p-4 items-center ">
 				{" "}
 				<h4 className="text-red-700 font-bold uppercase text-sm pb-2">

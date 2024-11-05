@@ -5,7 +5,9 @@ export default function AchievementsCard() {
 		<Card>
 			<div className="flex items-center gap-4 p-2">
 				{/* icon */}
-				<div></div>
+				<div>
+					<img src="/achievements.png" />
+				</div>
 				<div>
 					<h3 className="text-sm uppercase font-bold">
 						Unlock leagues

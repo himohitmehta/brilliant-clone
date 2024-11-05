@@ -16,7 +16,7 @@ export default function Hero() {
 				</Button>
 			</div>
 			<div>
-				<img src="/public/hero-image.png" />
+				<img src="/hero-image.png" />
 			</div>
 		</div>
 	);

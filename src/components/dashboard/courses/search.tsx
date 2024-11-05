@@ -21,12 +21,13 @@ export default function SearchBar() {
 		1000,
 	);
 	return (
-		<div>
-			<h1>Browse Courses</h1>
+		<div className="py-8">
+			<h1 className="text-3xl font-bold mb-8">Browse all Courses</h1>
 			<Input
 				defaultValue={name!}
 				onChange={handleInput}
 				placeholder="Search..."
+				className="rounded-full"
 			/>
 		</div>
 	);

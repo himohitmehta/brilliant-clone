@@ -17,9 +17,9 @@ export default function Categories() {
 }
 
 const categoriesList = [
-	{ icon: "/public/math.png", title: "Math" },
-	{ icon: "/public/data-analysis.png", title: "Data Analysis" },
-	{ icon: "/public/computer-science.png", title: "Computer science" },
-	{ icon: "/public/programming.png", title: "Programming & AI" },
-	{ icon: "/public/science.png", title: "Science & Engineering" },
+	{ icon: "/math.png", title: "Math" },
+	{ icon: "/data-analysis.png", title: "Data Analysis" },
+	{ icon: "/computer-science.png", title: "Computer science" },
+	{ icon: "/programming.png", title: "Programming & AI" },
+	{ icon: "/science.png", title: "Science & Engineering" },
 ];

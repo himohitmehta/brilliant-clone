@@ -6,9 +6,9 @@ import { AiFillThunderbolt, AiOutlineThunderbolt } from "react-icons/ai";
 
 export default function StreakCard() {
 	return (
-		<Card className="p-2">
-			<div className="flex w-full">
-				<h1 className="flex items-center font-bold text-3xl  flex-grow">
+		<Card className="p-4">
+			<div className="flex w-full mb-4">
+				<h1 className="flex items-center font-bold text-5xl  flex-grow">
 					<span>1</span>{" "}
 					<AiOutlineThunderbolt className="text-muted-foreground" />
 				</h1>
@@ -21,10 +21,10 @@ export default function StreakCard() {
 				</Button>
 			</div>
 			<div>
-				<h4 className="">
+				<h4 className="font-medium pb-4">
 					Solve <b>3 problems </b> to continue your streak
 				</h4>
-				<div className="flex gap-4 p-2">
+				<div className="flex gap-4 p-2 justify-between">
 					{streak.map((item) => {
 						const isFilled = item.icon === "filled";
 						const isActive = item.icon === "active";
@@ -54,6 +54,7 @@ export default function StreakCard() {
 							</div>
 						);
 					})}
+					<img src="/streak-side-img.png" />
 				</div>
 			</div>
 		</Card>

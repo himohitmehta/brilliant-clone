@@ -2,9 +2,9 @@ import RecommendedCard from "./recommended-card";
 
 export default function RecommendedCardsList() {
 	return (
-		<div>
-			<h3 className="font-bold ">Recommended for you</h3>
-			<div className="flex gap-4">
+		<div className="pt-8">
+			<h3 className="font-bold pb-4">Recommended for you</h3>
+			<div className="grid grid-cols-3 gap-4">
 				{cards.map((item) => {
 					return <RecommendedCard data={item} />;
 				})}
@@ -16,17 +16,17 @@ export default function RecommendedCardsList() {
 const cards: RecommendedCourseType[] = [
 	{
 		title: "Logic",
-		img: "",
+		img: "/logic.png",
 		chapter: "",
 	},
 	{
 		title: "Computer Science Fundamentals",
-		img: "",
+		img: "/cs-programming.png",
 		chapter: "CS & Programming - LEVEL 2",
 	},
 	{
 		title: "Solving Equations",
-		img: "",
+		img: "/foundational-math.png",
 		chapter: "Foundational Math - level 1",
 	},
 ];
