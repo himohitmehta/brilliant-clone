@@ -44,14 +44,17 @@ This is a clone of the [Brilliant](https://brilliant.org/) website. The clone is
 -   UI is not consistent as per the figma design provided.
 -   No responsive design, only desktop friendly.
 
-
 Built with:
-- React
-- Typescript
-- zod for schema validation
-- Tailwind CSS
-- shadcn UI
-- Firebase Authentication
-- React hook forms
-- Nuqs for managing search params state
-- React Router for routing inside the app
+
+-   React
+-   Typescript
+-   zod for schema validation
+-   Tailwind CSS
+-   shadcn UI
+-   Firebase Authentication
+-   React hook forms
+-   Nuqs for managing search params state
+-   React Router for routing inside the app
+
+Deployed On: [https://brilliant-clone.vercel.app/](https://brilliant-clone.vercel.app/)
+Demo Video: [https://drive.google.com/drive/folders/1uzrF6yXwrH3ZDibem_92tzO695gTTA6x?usp=drive_link](https://drive.google.com/drive/folders/1uzrF6yXwrH3ZDibem_92tzO695gTTA6x?usp=drive_link)
