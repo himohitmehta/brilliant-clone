@@ -1,8 +1,7 @@
-
-export default function WebsiteLayout({children}:{
-    children: React.ReactNode
+export default function WebsiteLayout({
+	children,
+}: {
+	children: React.ReactNode;
 }) {
-  return (
-    <div>{children}</div>
-  )
+	return <div>{children}</div>;
 }

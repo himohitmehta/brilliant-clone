@@ -1,9 +1,10 @@
 import { courses } from "@/lib/data/courses";
 import CourseCard from "./course-card";
-import { useQueryState } from "nuqs";
+import useSearchQuery from "@/lib/hooks/use-search-query";
 
 export default function CoursesList({ isNew }: { isNew?: boolean }) {
-	const [tab] = useQueryState("tab");
+	
+	const { query: tab } = useSearchQuery({ title: "tab" });
 	const filteredCourses = isNew
 		? courses.filter((item) => item.isNew)
 		: courses.filter((course) => course.category.toLowerCase() === tab);
