@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Brilliant Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a clone of the [Brilliant](https://brilliant.org/) website. The clone is built using React, Typescript, Tailwind CSS, shadcn UI, and Firebase Authentication.
 
-Currently, two official plugins are available:
+## Setup Instructions:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  Clone the repository
+2.  Add the environment variables:
 
-## Expanding the ESLint configuration
+        - Create a `.env` file in the root directory
+        - Add the following environment variables:
+        `env
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    VITE_FIREBASE_API_KEY="XXXXX"
+    VITE_FIREBASE_AUTH_DOMAIN="XXXX"
+    VITE_FIREBASE_PROJECT_ID="XXXX"
+    VITE_FIREBASE_STORAGE_BUCKET="XXXX"
+    VITE_FIREBASE_MESSAGING_SENDER_ID="XXXX"
+    VITE_FIREBASE_APP_ID="XXXX"
 
-- Configure the top-level `parserOptions` property like this:
+        -   Replace `XXXXX` with your own values
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
+4.  Start the development server:
+    ```bash
+    pnpm dev
+    ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Features Added:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+-   Landing Page UI
+-   Authentication: using email and password and Google (Facebook auth not implemented)
+-   Dashboard home page and courses catalog. In course catalog the user can switch between different categories using the tabs.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Known Limitations:
+
+-   UI Interactions and font not similar to the original website
+-   No animations
+-   Limited authentication options, i.e., **facebook** not implemented
+-   Search is not implemented in the dashboard
+-   UI is not consistent as per the figma design provided.
+-   No responsive design, only desktop friendly.
+
+
+Built with:
+- React
+- Typescript
+- zod for schema validation
+- Tailwind CSS
+- shadcn UI
+- Firebase Authentication
+- React hook forms
+- Nuqs for managing search params state
+- React Router for routing inside the app
