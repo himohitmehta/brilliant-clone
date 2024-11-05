@@ -12,10 +12,10 @@ export default function Courses() {
 		}
 	}, [query, setQuery]);
 
-	if (!query) return <div className="mx-auto max-w-7xl ">Loading</div>;
+	if (!query) return <div className="mx-auto max-w-6xl ">Loading</div>;
 
 	return (
-		<div className="mx-auto max-w-7xl ">
+		<div className="mx-auto max-w-6xl ">
 			<SearchBar />
 			<CoursesTabs />
 		</div>

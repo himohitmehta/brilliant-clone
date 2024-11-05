@@ -6,6 +6,7 @@ import DashboardHomePage from "./pages/dashboard";
 import RegisterPage from "./pages/auth/register";
 import DashboardCoursesPage from "./pages/dashboard/courses";
 import { NuqsAdapter } from "nuqs/adapters/react-router";
+import { Toaster } from "./components/ui/sonner";
 const router = createBrowserRouter([
 	{
 		path: "/login",
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
 function App() {
 	return (
 		<NuqsAdapter>
+			<Toaster />
 			<RouterProvider router={router} />
 		</NuqsAdapter>
 	);

@@ -1,17 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-import { MenuIcon } from "lucide-react";
+import { LogOutIcon } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { HiHome } from "react-icons/hi2";
 import { HiOutlineHome } from "react-icons/hi2";
 import { MdLibraryBooks } from "react-icons/md";
 import { MdOutlineLibraryBooks } from "react-icons/md";
+import { signOut } from "firebase/auth";
+import { auth } from "@/lib/firebase/config";
+import { toast } from "sonner";
 
 export default function Header() {
 	const { pathname } = useLocation();
 
+	const handleLogout = async () => {
+		await signOut(auth);
+		toast.message("Logged Out!");
+	};
 	return (
 		<div className="shadow-sm ">
 			<div className="flex gap-4  max-w-7xl mx-auto items-center">
@@ -66,8 +73,10 @@ export default function Header() {
 					<AiOutlineThunderbolt />
 				</Button>
 				{/* menu icon */}
-				<Button variant={"ghost"} size={"icon"}>
-					<MenuIcon />
+				<Button variant={"ghost"} size={"icon"} onClick={handleLogout}>
+					{/* <MenuIcon />
+					 */}
+					<LogOutIcon />
 				</Button>
 			</div>
 		</div>
