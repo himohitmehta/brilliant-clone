@@ -5,7 +5,7 @@ import WebsiteLandingPage from "./pages/website";
 import DashboardHomePage from "./pages/dashboard";
 import RegisterPage from "./pages/auth/register";
 import DashboardCoursesPage from "./pages/dashboard/courses";
-
+import { NuqsAdapter } from "nuqs/adapters/react-router";
 const router = createBrowserRouter([
 	{
 		path: "/login",
@@ -30,7 +30,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+	return (
+		<NuqsAdapter>
+			<RouterProvider router={router} />
+		</NuqsAdapter>
+	);
 }
 
 export default App;
